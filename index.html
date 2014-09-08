@@ -4,15 +4,23 @@
   <title>Asteroids</title>
   
   <style>
-    html, body, canvas {
+    html, body{
       padding: 0px;
       margin: 0px;
     }
+    
+    canvas{
+      margin: auto;
+      display: block;
+    }
+    
     </style>
 </head>
 
 <body>
+  <br>
   <canvas></canvas>
+
   
   <script src="keymaster.js"></script>
   <script src="lib/movingObject.js"></script>
@@ -30,7 +38,7 @@
     var game = new Asteroids.Game(
       canvasEl.width,
       canvasEl.height,
-      4
+      2
     );
     var view = new Asteroids.GameView(game, canvasEl.getContext("2d"));
     view.start();
